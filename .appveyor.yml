@@ -10,8 +10,7 @@ build: off  # будем использовать свой скрипт сбор
 
 install:
   # запускаем SUT (& означает, что в фоновом режиме - не блокируем терминал для запуска тестов)
-  - java -jar ./artifacts/app-deadline.jar -P:jdbc.url=jdbc:mysql://localhost:3306/database -P:jdbc.user=us
-    er -P:jdbc.password=password&
+  - java -jar ./artifacts/app-deadline.jar&
 
 build_script:
   - chmod +x gradlew
