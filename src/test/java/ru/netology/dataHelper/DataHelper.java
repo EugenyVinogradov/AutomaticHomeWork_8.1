@@ -58,7 +58,7 @@ public class DataHelper {
     }
 
     @SneakyThrows
-    public static void CleanDataBase() {
+    public static void cleanDataBase() {
         var runner = new QueryRunner();
         var cleanAuthCode = "DELETE FROM auth_codes;";
         var cleanCards = "DELETE FROM cards;";

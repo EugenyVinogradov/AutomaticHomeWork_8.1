@@ -1,18 +1,13 @@
 package ru.netology.test;
 
-import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.netology.page.AuthPage;
 import ru.netology.dataHelper.DataHelper;
-import ru.netology.page.CardsPage;
-
-import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.sleep;
 
 
 public class Tests {
@@ -24,7 +19,7 @@ public class Tests {
 
     @AfterAll
     public static void cleanDatabase() {
-        DataHelper.CleanDataBase();
+        DataHelper.cleanDataBase();
     }
 
     @Test

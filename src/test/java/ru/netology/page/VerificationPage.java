@@ -2,7 +2,6 @@ package ru.netology.page;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.commands.ShouldBe;
 import ru.netology.dataHelper.DataHelper;
 
 import static com.codeborne.selenide.Selenide.*;
@@ -14,10 +13,10 @@ public class VerificationPage {
     private SelenideElement wrongCode = $x("//*[text()='Поле обязательно для заполнения']");
     private SelenideElement blockedUser = $x("//*[text()='Код неверно введен три раза! Пользователь заблокирован.']");
 
-    public CardsPage cardsPage() {
+    public DashBoard cardsPage() {
         verifyCode.setValue(DataHelper.getVerificationCode());
         loginButton.click();
-        return new CardsPage();
+        return new DashBoard();
     }
 
     public VerificationPage enterWrongCode() {
