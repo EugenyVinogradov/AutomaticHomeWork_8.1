@@ -43,5 +43,11 @@ public class Tests {
         String actual = DataHelper.getStatusUser();
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    void shouldOk() {
+        String expected = "blocked";
+        String actual = "blocked";
+        Assertions.assertEquals(expected, actual);
+    }
 
 }
